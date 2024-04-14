@@ -1,0 +1,93 @@
+
+.heading,.heading1{
+    font-family: cursive;
+font-weight: bolder;
+font-size: 50px;
+}
+.nav-link{
+    font-size:larger;
+    color: white;
+}
+.nav-link:hover{
+    color: #e58e26;
+}
+.button:hover{
+background-color: #e58e26 !important;
+}
+.icon{
+    
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+  
+
+}
+.inner:hover{
+    filter: drop-shadow(0 0 0.75rem rgba(242, 116, 58, 0.793));
+}
+
+.content{
+    height: 300px;
+    
+
+}
+
+.icon i{
+    transition: all 0.9s ease-in-out;
+    background-color: #f19f3c;
+    padding: 10px 12px 0px 12px;
+   
+    
+}
+.icon i:hover{
+    transform:scale(2,2)
+}
+.practice{
+    filter: drop-shadow(0 0 0.75rem red);
+}
+
+
+.Services a{
+    color:white;
+    text-decoration: none;
+    
+}
+.Services a:hover{
+    color:#e58e26
+}
+form{
+    
+    flex-direction: column;
+    align-items: center;
+  
+  
+}
+.appointment:hover{
+    color:aliceblue;
+    
+}
+.heading1{
+    position: relative;
+    color: #121518;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+.atrcontact{
+    position: absolute;
+    background-color: #e58e26;
+    margin-top:-30px
+}
+.atrcontact:hover{
+    transform: scaleX(1.1);
+    background-color: #e57626;
+}
+.box:hover{
+text-shadow: 0 0 0.75rem red;
+
+}
