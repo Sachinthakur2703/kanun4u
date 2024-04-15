@@ -110,3 +110,13 @@ text-shadow: 0 0 0.75rem red;
 .light:hover::after{
     transform: scaleX(1);
 }
+.main:hover .main1{
+    filter:blur(1px) !important;
+    opacity: 0.5 !important;
+    
+}
+.main .main1:hover{
+    filter: blur(0px) !important;
+    opacity: 1 !important;
+  
+}
