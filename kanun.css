@@ -118,5 +118,6 @@ text-shadow: 0 0 0.75rem red;
 .main .main1:hover{
     filter: blur(0px) !important;
     opacity: 1 !important;
+    filter:drop-shadow(0 0 0.75rem rgb(224, 146, 67)) !important;
   
 }
