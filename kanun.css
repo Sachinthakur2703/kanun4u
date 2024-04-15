@@ -91,3 +91,22 @@ form{
 text-shadow: 0 0 0.75rem red;
 
 }
+.light{
+    position: relative;
+    cursor: pointer;
+
+}
+.light::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: aliceblue;
+    transform: scaleX(0);
+    transition: 1s;
+}
+.light:hover::after{
+    transform: scaleX(1);
+}
