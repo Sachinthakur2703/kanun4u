@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kanun</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="kanun.css">
+    <script src="login.js"></script>
+    <style>
+body{
+    font-style: italic;
+  
+}
+.main{
+background-color: #e58e26;
+}
+
+input{
+
+    border-radius: 30px;
+    margin:6px;
+ }
+ #submit:hover{
+background-color: rgb(246, 150, 6)!important;
+font-style: italic;
+ }
+ #submit{
+    font-style: italic;
+ }
+
+    </style> 
+</head>
+  <body>
+    <!-- heading of kanun -->
+ 
+  
+  <!-- navbar -->
+  <div class="container px-0 py-0 ">
+    <div class="bg-black d-flex justify-content-between">
+    <h1 class="heading bg-black my-0 p-2 " style="color: #e58e26;">Legal<sub style="font-size: 10px;">Consultancy....</sub></h1>
+   
+  </div>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://cdn-icons-png.flaticon.com/128/2966/2966758.png" alt="" height="40px"   ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item light">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item light">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item light">
+          <a class="nav-link" href="attorney.html">Attorney</a>
+        </li>
+       
+        <li class="nav-item light">
+          <a class="nav-link" href="appointment.html">Contact</a>
+        </li>
+        
+      </ul>
+      
+        
+        <button class="btn btn-outline-danger" type="submit"><a href="appointment.html" class=" text-decoration-none text-warning ">Get Appointment</a></button>
+      
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container d-flex justify-content-center mt-5">
+ <div class="main row text-center w-100 pb-5">
+
+   
+    <form action="" onsubmit="return validate()" id="form">
+        <div class="col-lg-12 text-center mt-5"><h1>Registration</h1></div> 
+        <div class="col-lg-12">
+            <label for="user">Username:</label> 
+       </div>
+      <div class="col-lg-12">
+    <input type="text"  id="user"  class="w-50 text-center ">
+    </div>
+    <div class="col-lg-12">
+    <span id="userr" style="color:red; "></span>
+  </div>
+  <div class="col-lg-12">
+    <label for="pass">Password:</label> 
+  </div>
+    <div class="col-lg-12">
+    <input type="text"  id="pass" class="w-50 text-center"> 
+</div>
+    <div class="col-lg-12">
+    <span id="passs" style="color:red; font-weight: bold;"></span>
+</div>
+<div class="col-lg-12">
+
+    <label for="conpass">Confirm-password:</label> 
+</div>
+    <div class="col-lg-12">
+    <input type="text"  id="conpass"  class="w-50 text-center">
+</div>
+    <div class="col-lg-12">
+    <span id="conpasss" style="color:red; font-weight: bold;"></span>
+</div>
+<div class="col-lg-12">
+    <label for="email">Email:</label> 
+</div>
+    <div class="col-lg-12">
+    <input type="text"  id="email"  class="w-50 text-center">
+</div>
+    <div class="col-lg-12">
+    <span id="emaill" style="color:red; font-weight: bold;"></span>
+</div>
+<div class="col-lg-12">
+    <label for="num">Number:</label> 
+</div>
+    <div class="col-lg-12 ">
+    <input type="number"  id="num"  class="w-50 text-center">
+    </div>
+    <div class="col-lg-12">
+    <span id="numm" style="color:red; font-weight: bold;"></span>
+</div>
+<div class="col-lg-12 float-center mt-2 ">
+   <p>If you are already registered <a class="text-decoration-underline ps-2">Login</a></p>
+  
+   </div>
+<div class="col-lg-12 mt-4">
+    
+    <input onclick="run()" type="submit" id="submit" >
+   </div>
+   
+    </form>
+ </div>
+</div>
+<script>
+    function validate(){
+        var user= document.getElementById('user').value;
+        var pass= document.getElementById('pass').value;
+        var conpass= document.getElementById('conpass').value;
+        var email= document.getElementById('email').value;
+        var num= document.getElementById('num').value;
+        var userr= document.getElementById('userr').innerHTML="";
+        var passs= document.getElementById('passs').innerHTML="";
+        var conpasss= document.getElementById('conpasss').innerHTML="";
+        var emaill= document.getElementById('emaill').innerHTML="";
+        var numm= document.getElementById('numm').innerHTML="";
+        if(user==''){
+            document.getElementById('userr').innerHTML="*Please  fill the username";
+            return false;
+            
+        }
+        if((user.length<=5) ||(user.lenght>20)){
+            document.getElementById('userr').innerHTML="user length must be between 5 to 20";
+            return false;
+        }
+        if(!isNaN(user)){
+            document.getElementById("userr").innerHTML="only character are allowed";
+            return false;
+        }
+        if(pass==''){
+            document.getElementById('passs').innerHTML="please  fill the password";
+            return false;
+            
+        }
+        if((pass.length<=5) ||(pass.lenght>20)){
+            document.getElementById('passs').innerHTML="password length must be between 5 to 20";
+            return false;
+        }
+        if(pass!=conpass){
+            document.getElementById('passs').innerHTML="password not matched";
+            return false;
+
+        }
+        if(conpass==''){
+            document.getElementById('conpasss').innerHTML="please  fill the  confirm password";
+            return false;
+            
+        }
+        if(email==''){
+            document.getElementById('emaill').innerHTML="please  fill the email";
+            return false;
+            
+        }
+        if(!email.match('@')|| !email.match('.com') && !email.match(".in") ){
+            document.getElementById('emaill').innerHTML="invlaid position";
+            return false;
+        }
+        
+        if(num==''){
+            document.getElementById('numm').innerHTML="please enter the number";
+            return false;
+        }
+        if(isNaN(num)){
+            document.getElementById("numm").innerHTML="only digits are allowed";
+            return false;
+        }
+        if(num.length!=10)
+        {
+            document.getElementById("numm").innerHTML="number must be 10 digits";
+            return false;
+        }
+        alert("submit success")
+        }
+</script>
+ </div>   
+</body>
+<footer class="container bg-black mt-5 p-5" data-aos="fade-up"
+  data-aos-duration="2000">
+    <div class="row text-center">
+      <div class="col-lg-4 col-md-12 text-center">
+        <h3 class="fw-bolder fst-italic p-3" style="color:#e58e26">About Us</h3>
+        <p class="text-light">Welcome to Legal Consultancy, a leading legal firm in India committed to delivering exceptional legal solutions and services. Established with a vision to advocate for justice and uphold the principles of law, we pride ourselves on being a reliable and trusted partner for individuals, businesses, and organizations across the country.
+
+          Our team of highly skilled and experienced legal professionals specializes in a diverse range of practice areas, enabling us to cater to the unique legal needs of our clients.</p>
+      </div>
+      <!-- col close -->
+    
+    <div class="col-lg-4 col-md-12 ">
+      <h3 class="fw-bolder fst-italic p-3" style="color:#e58e26">Service Areas
+      </h3>
+  
+       <p class="Services"> <a href="" >Civil Law</a></p>
+       <p class="Services"> <a href="" >Family Law</a></p>
+       <p class="Services"> <a href="" >Business Law</a></p>
+        <p class="Services"><a href="" >Education Law</a></p>
+       <p class="Services"> <a href="" >Immigration Law</a></p>
+      
+    </div>
+    <div class="col-lg-4 col-md-12 text-center text-light ">
+      <h3 class="fw-bolder fst-italic p-3" style="color:#e58e26">Get In Touch</h3>
+     
+       <p> Chintpurni</p>
+      <p>  8219439638</p>
+      <p>  sachinthakur2326@gmail.com</p>
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1"  href="https://web.whatsapp.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"height="40px">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1"  href="https://twitter.com/?lang-en" target="_blank">
+             <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png"height="40px">	
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1" href="https://www.facebook.com/aviray.thakur" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" height="40px">
+          </a>
+        </li>
+      <li class="list-inline-item mt-3">
+          <a class="btn-floating btn-gplus mx-1"  href="https://www.instagram.com/thakursachin._/?hl=en" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" height="40px">
+          </a>
+        </li>
+      </ul>
+   
+    </div>
+    <div class="container bg-light text-center pt-2">
+     <p>&copy; Copyright Kanun. All rights Reserved</p> 
+     <p>Designed by <span style="color:#e58e26">@Sachin Thakur &hearts;</span></p>
+    </div>
+  </div>
+    <!-- row close -->
+  </footer>
+  <!-- footer end -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
